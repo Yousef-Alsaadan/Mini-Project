@@ -87,6 +87,38 @@ function logIn() {
     });
 }
 
+let textArea = document.getElementById("textArea");
+let blogTitle = document.getElementById("blogTitle");
+let imageUrl = document.getElementById("imageUrl");
+
+let urlBlog = "https://66e7e6a8b17821a9d9da6f51.mockapi.io/blog";
+
+function blogs() {
+  event.preventDefault();
+  if (blogTitle.value != "" || textArea.value != "") {
+    const userData = JSON.parse(localStorage.getItem("user"));
+
+    fetch(urlBlog, {
+      method: "POST",
+      body: JSON.stringify({
+        writer: userData.user,
+        title: blogTitle.value,
+        content: textArea.value,
+        img: imageUrl.value,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        window.location.href = "./profile.html";
+      });
+  } else {
+    errorLog("You should have some content!");
+  }
+}
+
 function errorSign(message) {
   let alertPlaceholder = document.getElementsByClassName(
     "liveAlertPlaceholder"
@@ -149,38 +181,4 @@ function areUserTaken(userName, emailAddress) {
         (data) => data.user === userName || data.email === emailAddress
       );
     });
-}
-
-let textArea = document.getElementById("textArea");
-let blogTitle = document.getElementById("blogTitle");
-let imageUrl = document.getElementById("imageUrl");
-
-let urlBlog = "https://66e7e6a8b17821a9d9da6f51.mockapi.io/blog";
-
-function blogs() {
-  event.preventDefault();
-  if (blogTitle.value != "") {
-    if (textArea.value != "") {
-      fetch(urlBlog, {
-        method: "POST",
-        body: JSON.stringify({
-          writer: userName.value,
-          title: blogTitle.value,
-          content: textArea.value,
-          img: imageUrl.value,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-        .then((response) => response.json())
-        .then((json) => {
-          window.location.href = "./profile.html";
-        });
-    } else {
-      errorSign("You should have some content!");
-    }
-  } else {
-    errorSign("Type the topic please!");
-  }
 }

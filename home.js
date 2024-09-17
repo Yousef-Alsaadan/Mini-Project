@@ -1,5 +1,3 @@
-// let urlBlog = "https://66e7e6a8b17821a9d9da6f51.mockapi.io/blog";
-
 function displayData() {
   let Blogs = document.getElementsByClassName("Blogs")[0];
   fetch(urlBlog)
@@ -25,7 +23,7 @@ function displayData() {
         img.src = data.img;
 
         a.textContent = data.writer;
-        a.href = './profile.html';
+        a.href = "./profile.html";
 
         blog_detial.appendChild(title);
         blog_detial.appendChild(text);
@@ -65,12 +63,11 @@ window.onload = function () {
     div.appendChild(name);
     div.appendChild(logOut);
     userBar.appendChild(div);
-
-    displayData();
   } else {
     let hidden = document.getElementsByClassName("hidden")[0];
     hidden.style.display = "block";
   }
+  displayData();
 };
 
 function logOut() {
