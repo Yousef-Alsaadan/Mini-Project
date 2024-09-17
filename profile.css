@@ -1,0 +1,47 @@
+.user_info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.user_info p {
+    max-width: 50%;
+    color: rgb(65, 65, 65);
+
+}
+
+.redBtn {
+    text-decoration: none;
+    background: -webkit-linear-gradient(right, #662e00, #802e00, #b32e00, #e62e00);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: .1rem 1rem;
+    border: none;
+}
+
+.redBtn:hover {
+    background: -webkit-linear-gradient(right, #802e00, #b32e00, #e62e00, #e42e00);
+    transition: all 0.3s ease;
+}
+
+.user_info a {
+    text-decoration: none;
+    background: -webkit-linear-gradient(right, #003366, #004080, #0059b3, #0073e6);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: .1rem 1rem;
+    border: none;
+}
+
+.user_info a:hover {
+    background: -webkit-linear-gradient(right, #004080, #0059b3, #0073e6, #0072E4);
+    transition: all 0.3s ease;
+}
+
+.Blogs h2 {
+    margin-bottom: 1rem;
+}

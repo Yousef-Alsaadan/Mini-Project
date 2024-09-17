@@ -1,0 +1,127 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav_contener">
+        <div class="d-flex">
+          <h1><a href="home.html">Welcome</a></h1>
+          <a href="./home.html" class="post_nav">Home</a>
+          <a href="./post.html" class="post_nav">Post a new Blog</a>
+        </div>
+
+        <div class="user_bar">
+          <a href="index.html" class="hidden">Login / Signup</a>
+        </div>
+      </div>
+    </nav>
+    <div class="wrapper_main">
+      <div class="wrapper">
+        <div class="title-text">
+          <div class="title signup">Edit profile</div>
+        </div>
+        <div class="form-container">
+          <div class="form-inner">
+            <form action="#" class="login">
+              <div class="liveAlertPlaceholder"></div>
+
+              <div class="field">
+                <input
+                  type="text"
+                  placeholder="User Name"
+                  id="userValidate"
+                  required
+                />
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  placeholder="Email Address"
+                  id="emailAddress"
+                  required
+                />
+              </div>
+              <div class="field">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="passValidate"
+                  required
+                />
+              </div>
+              <div class="field field_textarea">
+                <!-- <input
+                  type="text"
+                  placeholder="Email Address"
+                  id="emailAddress"
+                  required
+                /> -->
+                <textarea name="" id="" placeholder="Bio"></textarea>
+              </div>
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input
+                  type="submit"
+                  value="Update"
+                  id="logInBtn"
+                  class="liveAlertBtn"
+                  onclick="logIn()"
+                />
+              </div>
+            </form>
+            <form action="#" class="signup">
+              <div class="liveAlertPlaceholder"></div>
+
+              <div class="field">
+                <input
+                  type="text"
+                  placeholder="User Name"
+                  id="userName"
+                  required
+                />
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  placeholder="Email Address"
+                  id="emailAddress"
+                  required
+                />
+              </div>
+              <div class="field">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="pass"
+                  required
+                />
+              </div>
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input
+                  type="submit"
+                  value="Signup"
+                  id="signUpBtn"
+                  class="liveAlertBtn"
+                  onclick="signUp()"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© Yousef Alsaadan</p>
+    </footer>
+    <script src="main.js"></script>
+    <!-- <script src="home.js"></script> -->
+    <script src="edit_profile.js"></script>
+  </body>
+</html>
